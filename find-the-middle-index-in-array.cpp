@@ -5,7 +5,7 @@ using namespace std;
 
 class Solution {
 public:
-	static int pivotIndex(vector<int> &nums)
+	int pivotIndex(vector<int> &nums)
 	{
 		int total = 0;
 		for (int i = 0; i < nums.size(); i++) {
@@ -13,6 +13,7 @@ public:
 		}
 		int left = 0;
 		for (int i = 0; i < nums.size(); i++) {
+			left += nums[i];
 			if (left == total - left) {
 				return i;
 			}
@@ -21,17 +22,16 @@ public:
 	}
 };
 
-int main(void)
+int main()
 {
-	vector<int> nums;
 
 	int size = 0;
 	scanf("%d", &size);
+	vector<int> nums(size);
 	for (int i = 0; i < size; ++i) {
-		scanf("%d", nums.data() + i);
+		scanf("%d", &nums[i]);
 	}
-	int output = 0;
-	output = Solution::pivotIndex(nums);
+	int output = Solution().pivotIndex(nums);
 
 	printf("%d", output);
 
