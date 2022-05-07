@@ -7,6 +7,7 @@ class Solution {
 public:
 	int pivotIndex(vector<int> &nums)
 	{
+		printf("%d\n", nums.size());
 		int total = 0;
 		for (int i = 0; i < nums.size(); i++) {
 			total += nums[i];
@@ -24,8 +25,8 @@ public:
 
 int main()
 {
-
 	int size = 0;
+	printf("Please input the size of the array: ");
 	scanf("%d", &size);
 	vector<int> nums(size);
 	for (int i = 0; i < size; ++i) {
