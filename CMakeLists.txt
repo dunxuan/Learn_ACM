@@ -3,4 +3,4 @@ project(Learn_ACM)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Learn_ACM find-the-middle-index-in-array.cpp)
+add_executable(Learn_ACM )
